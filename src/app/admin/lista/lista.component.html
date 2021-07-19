@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr >
+
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">Fecha de Nacimiento</th>
+          <th scope="col">Foto</th>
+
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let a of listadePersonas ;let i = index" >
+
+          <td >{{a.nombre}}</td>
+          <td>{{a.apellido}}</td>
+          <td>{{a.fechaNacimiento}}</td>
+          <td><div><input type="image" src={{a.foto}} width="50px" height="50px" (click)="show=true" (click)="buscar(a.id)" (click)="show=true" /></div></td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col mx-auto" style="width: 400px;">
+
+    <div class="mx-auto "style="width: 400px;" *ngIf="show">
+      <div class="card text-dark bg-light mb-3 center-block" style="width: 18rem;">
+        <img src="{{fotoCarta}}"  alt="" width="200px" weight="200px" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Usuario {{idCarta}}</h5>
+          <p class="card-text">{{nombreCarta}} {{apellidoCarta}}</p>
+          <p class="card-text">Usuario: {{usuarioCarta}}</p>
+          <p class="card-text">Contraseña: {{passwordCarta}}</p>
+          <div  *ngIf="muestra"><img class="img-centro" src="{{gif}}"  alt="" width="50px" weight="50px"></div>
+
+        </div>
+      </div>
+      </div>
+</div>
+

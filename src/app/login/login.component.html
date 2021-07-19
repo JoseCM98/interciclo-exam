@@ -1,9 +1,8 @@
-<div class="container mx-auto "style="width: 400px;" *ngIf="nem">
+<div class="container" >
   <form>
-    <div><img class="img-centro" src="https://png.pngtree.com/element_origin_min_pic/00/00/06/12575cb97a22f0f.jpg" width="200px" weight="200px"></div>
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Usuario</label>
-
+      <label >{{name}}</label>
       <input type="text" class="form-control" [(ngModel)]="name"[ngModelOptions]="{standalone: true}">
       <div id="emailHelp" class="form-text">Nunca compartas tu nombre de usuario</div>
     </div>
@@ -15,9 +14,6 @@
 
   </form>
 </div>
-<div *ngIf="nom">
-  <app-cabecera></app-cabecera>
-  <router-outlet></router-outlet>
-  <app-footer></app-footer>
-</div>
+
+
 
